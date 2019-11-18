@@ -1,12 +1,16 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
+import { Movie } from "../interfaces/movie";
+import { ShowDescription } from "../interfaces/show-description";
 
 @Injectable({
   providedIn: "root"
 })
 export class MovieFinderService {
-  movies: any[];
+  movies: ShowDescription[];
+  // movies: Movie[] = { ...; show = false };
+
   watchList: any[];
 
   constructor(private http: HttpClient) {}

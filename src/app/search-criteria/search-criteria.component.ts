@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { MovieFinderService } from "../services/movie-finder.service";
+import { Router } from "@angular/router";
 // import { FormBuilder, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -10,11 +11,10 @@ import { MovieFinderService } from "../services/movie-finder.service";
 export class SearchCriteriaComponent implements OnInit {
   movieList: any[];
 
-  constructor(private movieService: MovieFinderService) { }
-
-
-
-
+  constructor(
+    private movieService: MovieFinderService,
+    private router: Router
+  ) {}
 
   getTheMovies(rating: string, genre: string, year: string) {
     let genreCode = "0";
@@ -23,55 +23,55 @@ export class SearchCriteriaComponent implements OnInit {
         genreCode = "28";
         break;
       case "Adventure":
-        genreCode = "12"
+        genreCode = "12";
         break;
       case "Animation":
-        genreCode = "16"
+        genreCode = "16";
         break;
       case "Comedy":
-        genreCode = "35"
+        genreCode = "35";
         break;
       case "Crime":
-        genreCode = "80"
+        genreCode = "80";
         break;
       case "Documentary":
-        genreCode = "99"
+        genreCode = "99";
         break;
       case "Drama":
-        genreCode = "18"
+        genreCode = "18";
         break;
       case "Family":
-        genreCode = "10751"
+        genreCode = "10751";
         break;
       case "Fantasy":
-        genreCode = "14"
+        genreCode = "14";
         break;
       case "History":
-        genreCode = "36"
+        genreCode = "36";
         break;
       case "Horror":
-        genreCode = "27"
+        genreCode = "27";
         break;
       case "Music":
-        genreCode = "10402"
+        genreCode = "10402";
         break;
       case "Mystery":
-        genreCode = "9648"
+        genreCode = "9648";
         break;
       case "Romance":
-        genreCode = "10749"
+        genreCode = "10749";
         break;
       case "Science Fiction":
-        genreCode = "878"
+        genreCode = "878";
         break;
       case "Thriller":
-        genreCode = "53"
+        genreCode = "53";
         break;
       case "Western":
-        genreCode = "37"
+        genreCode = "37";
         break;
       case "":
-        genreCode = ""
+        genreCode = "";
         break;
     }
 
@@ -80,6 +80,7 @@ export class SearchCriteriaComponent implements OnInit {
       this.movieService.setMovies(this.movieList);
       console.log(this.movieList);
       console.log(rating);
+      this.router.navigate(["movieList"]);
     });
   }
 
