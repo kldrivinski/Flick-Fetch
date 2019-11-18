@@ -1,1 +1,12 @@
-<p>movie-list works!</p>
+<!-- <div *ngFor="let movie of movies">
+  <p>{{ movie.title }}</p>
+</div> -->
+
+<!-- <br /><a routerLink="/watchList">Your Watch-List</a><br /> -->
+<div *ngFor="let movie of movies; index as i">
+  <p (click)="setIndex(i)">{{ movie.title }}</p>
+  <div *ngIf="index === i">
+    <p>{{ movie.overview }}</p>
+  </div>
+  <button (click)="addToWatchList(movie)">add to watch list</button><br />
+</div>

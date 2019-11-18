@@ -1,1 +1,13 @@
+<<<<<<< HEAD
 <p>watchlist-page works!</p>
+=======
+<h2>Your Watch List</h2>
+
+<div *ngFor="let movie of watchList; index as i">
+  <p (click)="setIndex(i)">{{ movie.title }}</p>
+  <div *ngIf="index === i">
+    <p>{{ movie.overview }}</p>
+  </div>
+  <button (click)="removeFromWatchList(i)">remove from Watch List</button>
+</div>
+>>>>>>> 686c0d6a739462e2bafecbc80d38375cc948eead
