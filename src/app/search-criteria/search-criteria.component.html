@@ -1,8 +1,17 @@
 <p>search-criteria works!</p>
 
-<!-- {{movieList.title}} -->
-<div *ngFor="let movie of movieList">
-    <p>{{movie.title}}</p>
-    <!-- <p>{{movieList.title}}</p> -->
+<form #searchForm="ngForm" (ngSubmit)="getTheMovies(searchForm.value.rating)">
+  <select name="rating" id="" ngModel>
+    <option value="G">rated G</option>
+    <option value="PG">rated PG</option>
+    <!-- <option value= "G" >rated G</option>
+        <option value= "G" >rated G</option>
+        <option value= "G" >rated G</option>
+        <option value= "G" >rated G</option>  -->
+  </select>
+  <button type="submit">Fetch the Movies!</button>
+</form>
 
+<div *ngFor="let movie of movieList">
+  <p>{{ movie.title }}</p>
 </div>
