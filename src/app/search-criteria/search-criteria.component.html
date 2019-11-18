@@ -14,5 +14,5 @@
 
 <div *ngFor="let movie of movieList">
   <p>{{ movie.title }}</p>
-  <button>More Info</button>
+  <button (click)="getMoreInfo()">More Info</button>
 </div>

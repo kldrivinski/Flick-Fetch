@@ -18,6 +18,9 @@ export class SearchCriteriaComponent implements OnInit {
       console.log(rating);
     });
   }
+  getMoreInfo(): void {
+    console.log("clicked button");
+  }
   ngOnInit() {
     // this.getTheMovies();
   }
