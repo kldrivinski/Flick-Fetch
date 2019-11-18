@@ -14,6 +14,8 @@
 
 <div *ngFor="let movie of movieList">
   <p>{{ movie.title }}</p>
-  <label for="">Add To <a href="">Your Watch List</a> <input type="checkbox" name="WatchList" id=""></label>
+  <label for="">Add To Your <a routerLink="/watchList"> Watch List</a>
+    <input type="checkbox" name="WatchList" id="" (click)="addToWatchList($event)">
+  </label>
 
 </div>
