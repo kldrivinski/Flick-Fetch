@@ -37,8 +37,18 @@
 
 
   <label name="year">Release year
-    <input type="text" name="year" ngModel>
+    <input type="text" name="year" #year="ngModel" (ngModel)="year" minlength="4" maxlength= "4" pattern='^[0-9]*$'>
   </label>
+
+  <div *ngIf="!year?.valid && (year?.dirty || year?.touched)">
+    <div *ngIf="year.errors.minlength">
+      Year Length Must be {{year.errors.minlength?.requiredLength}} characters
+    </div>
+  </div>
+
+
+
+
   <button type="submit" [disabled]="searchForm.invalid">Fetch the Movies!</button>
 </form>
 
