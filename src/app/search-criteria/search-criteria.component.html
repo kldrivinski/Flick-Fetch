@@ -1,8 +1,17 @@
 <p>search-criteria works!</p>
 
-<form #searchForm="ngForm"
-  (ngSubmit)="getTheMovies(searchForm.value.rating, searchForm.value.genre, searchForm.value.year)">
-  <label name="rating">Rating
+<form
+  #searchForm="ngForm"
+  (ngSubmit)="
+    getTheMovies(
+      searchForm.value.rating,
+      searchForm.value.genre,
+      searchForm.value.year
+    )
+  "
+>
+  <label name="rating"
+    >Rating
     <select name="rating" id="" ngModel>
       <option value="G"> G</option>
       <option value="PG"> PG</option>
@@ -12,8 +21,8 @@
     </select>
   </label>
 
-
-  <label name="genre">Genre
+  <label name="genre"
+    >Genre
     <select name="genre" ngModel>
       <option value="Action">Action</option>
       <option value="Animation">Animation</option>
@@ -31,30 +40,33 @@
       <option value="Science Fiction">Science Fiction</option>
       <option value="Thriller">Thriller</option>
       <option value="Western">Western</option>
-
     </select>
   </label>
 
-
-  <label name="year">Release year
-    <input type="text" name="year" #year="ngModel" (ngModel)="year" minlength="4" maxlength= "4" pattern='^[0-9]*$'>
+  <label name="year"
+    >Release year
+    <input
+      type="text"
+      name="year"
+      #year="ngModel"
+      (ngModel)="(year)"
+      minlength="4"
+      maxlength="4"
+      pattern="^[0-9]*$"
+    />
   </label>
 
   <div *ngIf="!year?.valid && (year?.dirty || year?.touched)">
     <div *ngIf="year.errors.minlength">
-      Year Length Must be {{year.errors.minlength?.requiredLength}} characters
+      Year Length Must be {{ year.errors.minlength?.requiredLength }} characters
     </div>
   </div>
 
-
-
-
-  <button type="submit" [disabled]="searchForm.invalid">Fetch the Movies!</button>
+  <button type="submit" [disabled]="searchForm.invalid">
+    Fetch the Movies!
+  </button>
 </form>
 
-
-
-
-<div *ngFor="let movie of movieList">
+<!-- <div *ngFor="let movie of movieList">
   <p>{{ movie.title }}</p>
-</div>
+</div> -->

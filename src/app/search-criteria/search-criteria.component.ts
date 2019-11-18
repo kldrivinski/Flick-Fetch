@@ -77,10 +77,14 @@ export class SearchCriteriaComponent implements OnInit {
 
     this.movieService.getMovieList(rating, genreCode, year).subscribe(data => {
       this.movieList = data.results;
+      this.movieService.setMovies(this.movieList);
       console.log(this.movieList);
       console.log(rating);
     });
   }
+
+  // onSubmit(): void {}
+
   ngOnInit() {
     // this.getTheMovies();
   }

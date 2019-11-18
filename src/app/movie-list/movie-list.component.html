@@ -1,2 +1,7 @@
 <p>movie-list works!</p>
-<p>take data from the form in the search and formulate a lit with it </p>
+
+<!-- <div *ngFor="let movie of movies">
+  <p>{{ movie.title }}</p>
+</div> -->
+
+<p *ngFor="let movie of movies">{{ movie.title }}</p>
