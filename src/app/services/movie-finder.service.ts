@@ -6,8 +6,17 @@ import { Observable } from "rxjs";
   providedIn: "root"
 })
 export class MovieFinderService {
-  movies: any[] = ["no movies meet your search criteria"];
+  movies: any[];
+  watchList: any[];
+
   constructor(private http: HttpClient) {}
+
+  setWatchList(watchList) {
+    this.watchList = watchList;
+  }
+  getWatchList() {
+    return this.watchList;
+  }
 
   setMovies(movies) {
     this.movies = movies;

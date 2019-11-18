@@ -1,7 +1,8 @@
-<p>movie-list works!</p>
-
 <!-- <div *ngFor="let movie of movies">
   <p>{{ movie.title }}</p>
 </div> -->
 
-<p *ngFor="let movie of movies">{{ movie.title }}</p>
+<div *ngFor="let movie of movies; index as i">
+  <p>{{ movie.title }}</p>
+  <button (click)="addToWatchList(movie)">add to watch list</button>
+</div>
