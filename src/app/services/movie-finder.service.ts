@@ -6,14 +6,17 @@ import { Observable } from "rxjs";
   providedIn: "root"
 })
 export class MovieFinderService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
-  getMovieList(rating: string): Observable<any> {
+  getMovieList(rating: string, genreCode: string, year: string): Observable<any> {
     return this.http.get("https://api.themoviedb.org/3/discover/movie/?", {
       params: {
         certification: rating,
         certification_country: "US",
-        api_key: "4df60c7a99b0e49c00d697427b5ff10d"
+        api_key: "4df60c7a99b0e49c00d697427b5ff10d",
+        with_genres: genreCode,
+        year: year,
+
       }
     });
   }
