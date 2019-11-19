@@ -10,7 +10,6 @@ import { MovieFinderService } from "../services/movie-finder.service";
 export class MovieListComponent implements OnInit {
   movies: any[];
 
-  watchList: any[] = [];
 
   status: boolean = false;
 
@@ -20,11 +19,10 @@ export class MovieListComponent implements OnInit {
 
   constructor(private movieService: MovieFinderService) { }
 
-  addToWatchList(movie: any[]) {
+  addToWatchList(movie) {
     // console.log(movie[i]);
-    this.watchList.push(movie);
-    console.log(this.watchList);
-    this.movieService.setWatchList(this.watchList);
+    this.movieService.setWatchList(movie);
+
   }
 
   setIndex(index: number) {
@@ -44,5 +42,6 @@ export class MovieListComponent implements OnInit {
   }
   ngOnInit() {
     this.movies = this.movieService.getMovies();
+
   }
 }

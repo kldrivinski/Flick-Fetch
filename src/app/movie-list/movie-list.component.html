@@ -3,7 +3,6 @@
 </div> -->
 
 <!-- <br /><a routerLink="/watchList">Your Watch-List</a><br /> -->
-
 <div class="nav">
   <div><a routerLink="/watchList">Watch List</a>
     <p>|</p> <a routerLink="/search">Search</a>
@@ -11,13 +10,17 @@
     <a routerLink="/movieList">Movie List</a>
   </div>
 </div>
+<div class="background">
+  <img src="/assets/thelobby.jpg">
+</div>
+
 <h1>Search Results</h1>
 <h2>(click the title for more)</h2>
 <div class="content">
 
   <div class="movieList" *ngFor="let movie of movies; index as i">
     <button class="title" (click)=" setIndex(i)">{{ movie.title }}</button>
-    <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}">
+    <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" (click)=" setIndex(i)">
     <div class="container" *ngIf="index === i">
       <div class="description">
         <h2>{{ movie.title }}</h2>

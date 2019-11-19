@@ -8,15 +8,23 @@ import { Observable } from "rxjs";
 })
 export class MovieFinderService {
   movies: any[];
-  // movies: Movie[] = { ...; show = false };
 
-  watchList: any[];
+
+  watchList: any[] = [];
 
   constructor(private http: HttpClient) { }
 
-  setWatchList(watchList) {
-    this.watchList = watchList;
+  setWatchList(movie) {
+    if (this.watchList.find(listitem => movie.id === listitem.id) === undefined) {
+      console.log("working");
+      this.watchList.push(movie);
+      console.log(this.watchList);
+    } else {
+      console.log("don't worry about it");
+    }
+
   }
+
   getWatchList() {
     return this.watchList;
   }

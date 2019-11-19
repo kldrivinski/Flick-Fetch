@@ -24,5 +24,8 @@ export class WatchlistPageComponent implements OnInit {
   }
   ngOnInit() {
     this.watchList = this.movieService.getWatchList();
+    this.watchList = this.movieService.watchList;
+
+    console.log(this.watchList)
   }
 }
