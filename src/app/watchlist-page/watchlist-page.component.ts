@@ -8,11 +8,20 @@ import { Movie } from "../interfaces/movie";
   styleUrls: ["./watchlist-page.component.css"]
 })
 export class WatchlistPageComponent implements OnInit {
-  watchList: any[];
+  watchList: any[] = [];
 
   index: number;
 
-  constructor(private movieService: MovieFinderService) {}
+  noMovies: boolean = true;
+
+  constructor(private movieService: MovieFinderService) { }
+
+
+  checkForEmptyArray() {
+    if (this.watchList.length > 0) {
+      this.noMovies = false;
+    }
+  }
 
   setIndex(index: number) {
     console.log(index);
@@ -28,7 +37,10 @@ export class WatchlistPageComponent implements OnInit {
   ngOnInit() {
     this.watchList = this.movieService.getWatchList();
     this.watchList = this.movieService.watchList;
-
+    this.checkForEmptyArray();
+    console.log(this.noMovies);
     console.log(this.watchList);
   }
+
+
 }

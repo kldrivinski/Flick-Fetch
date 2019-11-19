@@ -7,16 +7,28 @@ import { MovieFinderService } from "../services/movie-finder.service";
   styleUrls: ["./movie-list.component.css"]
 })
 export class MovieListComponent implements OnInit {
-  movies: any[];
+  movies: any[] = [];
 
   status: boolean = false;
 
   index: number;
 
+  noMovies: boolean = true;
+
   constructor(private movieService: MovieFinderService) {}
 
+  checkForEmptyArray() {
+    if (this.movies.length > 0) {
+      this.noMovies = false;
+    }
+  }
+  //   if (this.movies !== undefined) {
+  //     this.noMovies = false;
+  //   }
+  // }
+
   addToWatchList(movie) {
-    // console.log(movie[i]);
+    // this.noMovies = false;
     this.movieService.setWatchList(movie);
   }
 
@@ -35,5 +47,7 @@ export class MovieListComponent implements OnInit {
   }
   ngOnInit() {
     this.movies = this.movieService.getMovies();
+    this.checkForEmptyArray();
+    console.log(this.noMovies);
   }
 }
