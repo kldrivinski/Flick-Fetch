@@ -53,7 +53,7 @@
 
         </label>
 
-        <div *ngIf=" !year?.valid && (year?.dirty || year?.touched)">
+        <div *ngIf=" !year?.valid && (year?.dirty || year?.touched)" class="valid">
           <div *ngIf="year.errors.minlength">
             Year Length Must be {{ year.errors.minlength?.requiredLength }} characters
           </div>

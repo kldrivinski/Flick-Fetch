@@ -22,7 +22,7 @@
   max-width: 500px;
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 300px;
+  margin-bottom: 400px;
   line-height: 5;
   font-family: 'Bebas Neue', cursive;
 
@@ -30,7 +30,7 @@
 
 form {
   display: inline-flex;
-  border: 10px solid black;
+  /* border: 10px solid black; */
 }
 
 label[name="rating"] {
@@ -46,6 +46,10 @@ select[name="rating"] {
   background-position-x: 55px;
   height: 100px;
   width: 80px;
+  font-family: 'IBM Plex Serif', serif;
+  font-size: 25px;
+
+
 }
 
 
@@ -59,6 +63,7 @@ select[name="genre"] {
   background: no-repeat right #ddd;
   -webkit-appearance: media-slider;
   background-position-x: 55px;
+  font-family: 'IBM Plex Serif', serif;
   height: 100px;
   width: 80px;
 }
@@ -70,7 +75,12 @@ label[name="year"] {
   padding: 10px 10px;
 }
 
+input[name="year"] {
+  height: 94px;
+  font-family: 'IBM Plex Serif', serif;
+}
 
+.
 /* background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ddd;
 -webkit-appearance: media-slider;
 background-position-x: 55px;
