@@ -1,3 +1,166 @@
 .hidden {
   display: none;
 }
+h1 {
+  text-align: center;
+  font-family: 'Calistoga', cursive;
+}
+h2 {
+  text-align: center;
+  font-family: 'Calistoga', cursive;
+  font-size: 18px;
+
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movieList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border: 10px dotted goldenrod;
+  border-radius: 10px;
+  padding-top: 40px;
+padding-bottom: 40px;
+padding-right: 20px;
+padding-left: 20px;
+  width: 30%;
+  background-color:#383737;
+
+  
+}
+
+div {
+margin: 20px;
+}
+
+.title {
+  border-style: none;
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  background-color:#383737;
+  color: white;
+
+}
+
+.add {
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+
+margin: auto;
+background-color:#383737;
+color: white;
+height: auto;
+height: 80%;
+position: absolute;
+z-index: 2;
+display: flex;
+justify-content: space-around;
+left: 30px;
+right: 30px;
+border-radius: 5px;
+
+
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.close {
+  height: 40px;
+  margin: 20px;
+  color: white;
+  background-color:#383737;
+  border-style: none;
+
+}
+
+i{
+  font-size: 40px;
+}
+
+
+.container h2 {
+  font-size: 30px;
+}
+
+.description p {
+  margin: 20px;
+  font-size: 24px;
+}
+
+.add {
+  padding: 10px;
+  margin-left: 10px;
+  background-color: #76252C;
+  border-radius: 5px;
+  border-style: 2px #76252C;
+  border-width: 3px;
+  font-size: 16px;
+  color: white;
+}
+
+.add:hover {
+  
+  background-color: white;
+  color: #22080C
+
+}
+
+
+
+img {
+  object-fit: contain;
+  max-width: 75%;
+  /* width: 100%; */
+}
+
+
+
+
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: #76252C;
+  padding: 20px;
+  margin: 0;
+}
+
+.nav a {
+  margin-right: 10px;
+  margin-left: 10px;
+  display: inline;
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 34px;
+  font-family: 'Calistoga', cursive;
+}
+
+.nav a:hover {
+  color:  #7B6C6D;
+}
+
+.nav p {
+  display: inline;
+  color: whitesmoke;
+  font-size: 34px;
+  margin: 3px;
+
+}

@@ -12,7 +12,7 @@ export class WatchlistPageComponent implements OnInit {
 
   index: number;
 
-  constructor(private movieService: MovieFinderService) {}
+  constructor(private movieService: MovieFinderService) { }
 
   setIndex(index: number) {
     console.log(index);

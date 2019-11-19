@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { MovieFinderService } from "../services/movie-finder.service";
-import { Movie } from "../interfaces/movie";
-import { ShowDescription } from "../interfaces/show-description";
+
 
 @Component({
   selector: "app-movie-list",
@@ -9,15 +8,17 @@ import { ShowDescription } from "../interfaces/show-description";
   styleUrls: ["./movie-list.component.css"]
 })
 export class MovieListComponent implements OnInit {
-  movies: ShowDescription[];
+  movies: any[];
 
   watchList: any[] = [];
 
-  status: boolean = true;
+  status: boolean = false;
 
   index: number;
 
-  constructor(private movieService: MovieFinderService) {}
+
+
+  constructor(private movieService: MovieFinderService) { }
 
   addToWatchList(movie: any[]) {
     // console.log(movie[i]);
@@ -31,6 +32,16 @@ export class MovieListComponent implements OnInit {
     this.index = index;
   }
 
+  resetIndex() {
+    this.index = null;
+  }
+
+
+  clickEvent(index) {
+    this.index = index;
+    this.status = true;
+
+  }
   ngOnInit() {
     this.movies = this.movieService.getMovies();
   }
