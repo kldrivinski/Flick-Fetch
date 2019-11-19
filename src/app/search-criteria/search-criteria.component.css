@@ -18,7 +18,7 @@
 }
 
 .content {
-  border: orchid solid 2px;
+
   max-width: 500px;
   margin: 0 auto;
   text-align: center;
@@ -27,3 +27,53 @@
   font-family: 'Bebas Neue', cursive;
 
 }
+
+form {
+  display: inline-flex;
+  border: 10px solid black;
+}
+
+label[name="rating"] {
+  line-height: normal;
+  padding: 10px 10px;
+  justify-self: start;
+  /* display: none; */
+}
+
+select[name="rating"] {
+  background: no-repeat right #ddd;
+  -webkit-appearance: media-slider;
+  background-position-x: 55px;
+  height: 100px;
+  width: 80px;
+}
+
+
+label[name="genre"] {
+  line-height: normal;
+  padding: 10px 10px;
+  justify-self: start;
+}
+
+select[name="genre"] {
+  background: no-repeat right #ddd;
+  -webkit-appearance: media-slider;
+  background-position-x: 55px;
+  height: 100px;
+  width: 80px;
+}
+
+label[name="year"] {
+  /* line-height: normal; */
+  text-align: -webkit-left;
+  /* padding: 10px 10px; */
+  justify-self: start;
+}
+
+
+/* background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ddd;
+-webkit-appearance: media-slider;
+background-position-x: 55px;
+width: 80px;
+height: 100px;
+} */
