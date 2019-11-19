@@ -12,7 +12,7 @@ export class WatchlistPageComponent implements OnInit {
 
   index: number;
 
-  constructor(private movieService: MovieFinderService) { }
+  constructor(private movieService: MovieFinderService) {}
 
   setIndex(index: number) {
     console.log(index);
@@ -22,10 +22,13 @@ export class WatchlistPageComponent implements OnInit {
   removeFromWatchList(i: number) {
     this.watchList.splice(i, 1);
   }
+  resetIndex() {
+    this.index = null;
+  }
   ngOnInit() {
     this.watchList = this.movieService.getWatchList();
     this.watchList = this.movieService.watchList;
 
-    console.log(this.watchList)
+    console.log(this.watchList);
   }
 }

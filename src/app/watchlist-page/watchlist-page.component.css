@@ -1,0 +1,245 @@
+.hidden {
+  display: none;
+}
+
+body {
+  font-size: 16px;
+}
+h1 {
+  text-align: center;
+  font-family: "Calistoga", cursive;
+}
+h2 {
+  text-align: center;
+  font-family: "Calistoga", cursive;
+  font-size: 1em;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.movieList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  border: 10px dotted goldenrod;
+  border-radius: 10px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
+  width: 30%;
+  background-color: #383737;
+}
+
+div {
+  margin: 20px;
+}
+
+.title {
+  border-style: none;
+  font-size: 1.875em;
+  margin-bottom: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  background-color: #383737;
+  color: white;
+}
+
+.add {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875em;
+}
+
+.container {
+  margin: auto;
+  background-color: #383737;
+  color: white;
+  height: 75%;
+  width: 80%;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  /* justify-content: space-around; */
+  flex-direction: column;
+  left: 30px;
+  right: 30px;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+/* .description {
+  width: 100%;
+} */
+
+.close {
+  height: 40px;
+  margin: 20px;
+  color: white;
+  background-color: #383737;
+  border-style: none;
+}
+
+i {
+  font-size: 40px;
+  margin: 0px;
+}
+
+.container h2 {
+  font-size: 1.875em;
+  margin: 0px;
+}
+
+.description p {
+  font-size: 1em;
+  margin: 0px;
+}
+
+.add {
+  padding: 10px;
+  margin-left: 10px;
+  background-color: #76252c;
+  border-radius: 5px;
+  border-style: 2px #76252c;
+  border-width: 3px;
+  font-size: 16px;
+  color: white;
+}
+
+.add:hover {
+  background-color: white;
+  color: #22080c;
+}
+
+img {
+  object-fit: contain;
+  max-width: 75%;
+  /* width: 100%; */
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: #76252c;
+  padding: 20px;
+  margin: 0;
+}
+
+.nav a {
+  margin-right: 10px;
+  margin-left: 10px;
+  display: inline;
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 2.125em;
+  font-family: "Calistoga", cursive;
+}
+
+.nav a:hover {
+  color: #7b6c6d;
+}
+
+.nav p {
+  display: inline;
+  color: whitesmoke;
+  font-size: 2.125em;
+  margin: 3px;
+}
+
+.background {
+  margin: 0;
+  position: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.background img {
+  align-self: baseline;
+}
+
+@media only screen and (max-width: 640px) {
+  h1 {
+    font-size: 1em;
+  }
+  h2 {
+    font-size: 0.5em;
+  }
+
+  .movieList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border: 10px dotted goldenrod;
+    border-radius: 10px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+    width: 90%;
+    background-color: #383737;
+  }
+
+  .description {
+    overflow: auto;
+    width: 95%;
+    margin: 1px;
+  }
+
+  .close {
+    height: 40px;
+    margin: 5px;
+    color: white;
+    background-color: #383737;
+    border-style: none;
+    z-index: 1;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #76252c;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .nav a {
+    margin-right: 5px;
+    margin-left: 5px;
+    display: inline;
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.5em;
+    font-family: "Calistoga", cursive;
+  }
+
+  .nav a:hover {
+    color: #7b6c6d;
+  }
+
+  .nav p {
+    display: inline;
+    color: whitesmoke;
+    font-size: 1.5em;
+    margin: 1px;
+  }
+
+  .background {
+    display: none;
+  }
+}
