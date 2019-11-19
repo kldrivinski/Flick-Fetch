@@ -21,18 +21,15 @@
   vertical-align: middle;
   width: 100%;
   max-width: none;
-
 }
 
 .content {
-
   max-width: 500px;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 400px;
   line-height: 5;
-  font-family: 'Bebas Neue', cursive;
-
+  font-family: "Bebas Neue", cursive;
 }
 
 form {
@@ -53,12 +50,9 @@ select[name="rating"] {
   background-position-x: 55px;
   height: 80px;
   width: 100px;
-  font-family: 'IBM Plex Serif', serif;
+  font-family: "IBM Plex Serif", serif;
   font-size: 25px;
-
-
 }
-
 
 label[name="genre"] {
   line-height: normal;
@@ -70,7 +64,7 @@ select[name="genre"] {
   background: no-repeat right #ddd;
   -webkit-appearance: media-slider;
   background-position-x: 55px;
-  font-family: 'IBM Plex Serif', serif;
+  font-family: "IBM Plex Serif", serif;
   height: 80px;
   width: 100px;
 }
@@ -84,27 +78,24 @@ label[name="year"] {
 input[name="year"] {
   height: 80px;
   width: 100px;
-  font-family: 'IBM Plex Serif', serif;
+  font-family: "IBM Plex Serif", serif;
   /* -webkit-appearance: media-slider; */
-  background-color: #DDDDDD;
+  background-color: #dddddd;
   border-radius: 5px;
   border-style: none;
-
-
 }
 
 .valid {
   display: none;
 }
 
-
 button {
   align-self: flex-end;
   margin-bottom: 10px;
   padding: 10px 10px;
-  background-color: #76252C;
+  background-color: #76252c;
   color: white;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 18px;
   border-radius: 5px;
   height: 80px;
@@ -112,8 +103,8 @@ button {
 
 .nav {
   display: flex;
-  justify-content: center;
-  background-color: #76252C;
+  justify-content: space-between;
+  background-color: #76252c;
   padding: 20px;
   margin: 0;
 }
@@ -125,19 +116,22 @@ button {
   text-decoration: none;
   color: whitesmoke;
   font-size: 2.125em;
-  font-family: 'Calistoga', cursive;
+  font-family: "Calistoga", cursive;
 }
 
 .nav a:hover {
-  color:  #7B6C6D;
+  color: #7b6c6d;
 }
 
 .nav p {
   display: inline;
   color: whitesmoke;
   font-size: 2.125em;
-  margin: 3px;
-
+  margin: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+.nav div {
+  margin: 20px;
 }
 
 /* background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ddd;

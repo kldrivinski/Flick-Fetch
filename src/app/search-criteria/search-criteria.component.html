@@ -1,25 +1,29 @@
 <div class="body">
-
   <div class="nav">
-    <div><a routerLink="/watchList">Watch List</a>
-      <p>|</p> <a routerLink="/search">Search</a>
+    <p>Flick Fetch</p>
+
+    <div>
+      <a routerLink="/watchList">Watch List</a>
       <p>|</p>
       <a routerLink="/movieList">Movie List</a>
     </div>
   </div>
 
-
   <div class="background">
     <div class="intro">
       <div class="content">
-        <form #searchForm="ngForm" (ngSubmit)="
-    getTheMovies(
-      searchForm.value.rating,
-      searchForm.value.genre,
-      searchForm.value.year
-    )
-  ">
-          <label name="rating">Rating
+        <form
+          #searchForm="ngForm"
+          (ngSubmit)="
+            getTheMovies(
+              searchForm.value.rating,
+              searchForm.value.genre,
+              searchForm.value.year
+            )
+          "
+        >
+          <label name="rating"
+            >Rating
             <select name="rating" id="" ngModel>
               <option value="G"> G</option>
               <option value="PG"> PG</option>
@@ -29,7 +33,8 @@
             </select>
           </label>
 
-          <label name="genre">Genre
+          <label name="genre"
+            >Genre
             <select name="genre" ngModel>
               <option value="Action">Action </option>
               <option value="Animation">Animation</option>
@@ -50,16 +55,26 @@
             </select>
           </label>
 
-          <label name="year">Release year
-            <input type="text" name="year" #year="ngModel" (ngModel)="(year)" minlength="4" maxlength="4"
-              pattern="^(19+[0-9]+|20+[0-9]+)" />
-
-
+          <label name="year"
+            >Release year
+            <input
+              type="text"
+              name="year"
+              #year="ngModel"
+              (ngModel)="(year)"
+              minlength="4"
+              maxlength="4"
+              pattern="^(19+[0-9]+|20+[0-9]+)"
+            />
           </label>
 
-          <div *ngIf=" !year?.valid && (year?.dirty || year?.touched)" class="valid">
+          <div
+            *ngIf="!year?.valid && (year?.dirty || year?.touched)"
+            class="valid"
+          >
             <div *ngIf="year.errors.minlength">
-              Year Length Must be {{ year.errors.minlength?.requiredLength }} characters
+              Year Length Must be
+              {{ year.errors.minlength?.requiredLength }} characters
             </div>
             <div *ngIf="year.errors.pattern">
               Year must be after 1900

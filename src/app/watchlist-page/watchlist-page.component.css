@@ -65,7 +65,7 @@ p {
   margin: auto;
   background-color: #383737;
   color: white;
-  height: 75%;
+  height: 80%;
   width: 80%;
   position: absolute;
   z-index: 2;
@@ -78,10 +78,6 @@ p {
   overflow: auto;
 }
 
-/* .description {
-  width: 100%;
-} */
-
 .close {
   height: 40px;
   margin: 20px;
@@ -92,17 +88,15 @@ p {
 
 i {
   font-size: 40px;
-  margin: 0px;
 }
 
 .container h2 {
   font-size: 1.875em;
-  margin: 0px;
 }
 
 .description p {
+  margin: 20px;
   font-size: 1em;
-  margin: 0px;
 }
 
 .add {
@@ -124,12 +118,13 @@ i {
 img {
   object-fit: contain;
   max-width: 75%;
+  z-index: 0;
   /* width: 100%; */
 }
 
 .nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   background-color: #76252c;
   padding: 20px;
   margin: 0;
@@ -153,7 +148,7 @@ img {
   display: inline;
   color: whitesmoke;
   font-size: 2.125em;
-  margin: 3px;
+  margin: 20px;
 }
 
 .background {
@@ -236,7 +231,7 @@ img {
     display: inline;
     color: whitesmoke;
     font-size: 1.5em;
-    margin: 1px;
+    margin: 20px;
   }
 
   .background {
