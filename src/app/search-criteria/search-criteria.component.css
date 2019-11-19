@@ -64,10 +64,10 @@ select[name="genre"] {
 }
 
 label[name="year"] {
-  /* line-height: normal; */
+  line-height: normal;
   text-align: -webkit-left;
-  /* padding: 10px 10px; */
   justify-self: start;
+  padding: 10px 10px;
 }
 
 
