@@ -18,10 +18,12 @@
 }
 
 .content {
+  border: orchid solid 2px;
   max-width: 500px;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 300px;
-  max-height: 200px;
+  line-height: 5;
+  font-family: 'Bebas Neue', cursive;
 
 }
