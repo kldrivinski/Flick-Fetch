@@ -1,12 +1,20 @@
 import { Component, OnInit } from "@angular/core";
 import { MovieFinderService } from "../services/movie-finder.service";
 import { Router } from "@angular/router";
+import { trigger, transition, animate, style } from "@angular/animations";
+
 // import { FormBuilder, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: "app-search-criteria",
   templateUrl: "./search-criteria.component.html",
-  styleUrls: ["./search-criteria.component.css"]
+  styleUrls: ["./search-criteria.component.css"],
+  animations: [
+    trigger("fadeInAndOut", [
+      transition(":enter", [style({ opacity: 0 }), animate("0.5s")]),
+      transition(":leave", [animate("0.5s", style({ opacity: 0 }))])
+    ])
+  ]
 })
 export class SearchCriteriaComponent implements OnInit {
   movieList: any[];
@@ -14,7 +22,7 @@ export class SearchCriteriaComponent implements OnInit {
   constructor(
     private movieService: MovieFinderService,
     private router: Router
-  ) {}
+  ) { }
 
   getTheMovies(rating: string, genre: string, year: string) {
     let genreCode = "0";

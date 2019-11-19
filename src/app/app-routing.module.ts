@@ -7,7 +7,7 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 
 const routes: Routes = [
   { path: "watchList", component: WatchlistPageComponent },
-  { path: "search", component: SearchCriteriaComponent },
+  { path: "search", component: SearchCriteriaComponent, data: { animation: 'Search' }, },
   { path: "movieList", component: MovieListComponent },
   { path: "", redirectTo: "/search", pathMatch: "full" }
 ];
