@@ -4,33 +4,36 @@
 
 <!-- <br /><a routerLink="/watchList">Your Watch-List</a><br /> -->
 <div class="nav">
-  <div><a routerLink="/watchList">Watch List</a>
-    <p>|</p> <a routerLink="/search">Search</a>
+  <p>Flick Fetch</p>
+  <div>
+    <a routerLink="/watchList">Watch List</a>
     <p>|</p>
-    <a routerLink="/movieList">Movie List</a>
+    <a routerLink="/search">Search</a>
   </div>
 </div>
 <div class="background">
-  <img src="/assets/thelobby.jpg">
+  <img src="/assets/thelobby.jpg" />
 </div>
 
 <h1>Search Results</h1>
-<h2>(click the title for more)</h2>
+<h2>(click the title for more info)</h2>
 <div class="content">
-
   <div class="movieList" *ngFor="let movie of movies; index as i">
-    <button class="title" (click)=" setIndex(i)">{{ movie.title }}</button>
-    <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" (click)=" setIndex(i)">
+    <button class="title" (click)="setIndex(i)">{{ movie.title }}</button>
+    <img
+      src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}"
+      (click)="setIndex(i)"
+    />
     <div class="container" *ngIf="index === i">
-      <div class="description">
-        <h2>{{ movie.title }}</h2>
-        <p>{{ movie.overview }}</p>
-      </div>
-
-
-      <button class="close" (click)="resetIndex()"><i class="fas fa-times"></i></button>
+      <button class="close" (click)="resetIndex()">
+        <i class="fas fa-times"></i>
+      </button>
+      <h2>{{ movie.title }}</h2>
+      <p>{{ movie.overview }}</p>
     </div>
-    <button class="add" (click)="addToWatchList(movie)" (click)="clickEvent(i)">Add to watch list</button>
+    <button class="add" (click)="addToWatchList(movie)" (click)="clickEvent(i)">
+      Add to watch list
+    </button>
     <!-- <div *ngIf="index === i && status === true">
       <p>Added to your list!</p>
     </div> -->

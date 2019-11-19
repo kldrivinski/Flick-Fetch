@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { MovieFinderService } from "../services/movie-finder.service";
 
-
 @Component({
   selector: "app-movie-list",
   templateUrl: "./movie-list.component.html",
@@ -10,19 +9,15 @@ import { MovieFinderService } from "../services/movie-finder.service";
 export class MovieListComponent implements OnInit {
   movies: any[];
 
-
   status: boolean = false;
 
   index: number;
 
-
-
-  constructor(private movieService: MovieFinderService) { }
+  constructor(private movieService: MovieFinderService) {}
 
   addToWatchList(movie) {
     // console.log(movie[i]);
     this.movieService.setWatchList(movie);
-
   }
 
   setIndex(index: number) {
@@ -34,14 +29,11 @@ export class MovieListComponent implements OnInit {
     this.index = null;
   }
 
-
   clickEvent(index) {
     this.index = index;
     this.status = true;
-
   }
   ngOnInit() {
     this.movies = this.movieService.getMovies();
-
   }
 }
