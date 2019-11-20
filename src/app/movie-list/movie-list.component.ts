@@ -15,10 +15,13 @@ export class MovieListComponent implements OnInit {
 
   noMovies: boolean = true;
 
-  constructor(private movieService: MovieFinderService) {}
+
+  onList: boolean = true;
+
+  constructor(private movieService: MovieFinderService) { }
 
   checkForEmptyArray() {
-    if (this.movies.length > 0) {
+    if (this.movies !== undefined) {
       this.noMovies = false;
     }
   }
@@ -49,5 +52,6 @@ export class MovieListComponent implements OnInit {
     this.movies = this.movieService.getMovies();
     this.checkForEmptyArray();
     console.log(this.noMovies);
+    console.log(this.movies)
   }
 }

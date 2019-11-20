@@ -65,7 +65,7 @@ p {
   margin: auto;
   background-color: #383737;
   color: white;
-  height: 80%;
+  height: 92%;
   width: 80%;
   position: absolute;
   z-index: 2;
@@ -90,8 +90,9 @@ i {
   font-size: 40px;
 }
 
-.container h2 {
+.container > h2 {
   font-size: 1.875em;
+ 
 }
 
 .description p {
@@ -137,6 +138,7 @@ img {
   color: whitesmoke;
   font-size: 2.125em;
   font-family: "Calistoga", cursive;
+  text-align: right;
 }
 
 .nav a:hover {
@@ -163,14 +165,26 @@ img {
 
 .background img {
   align-self: baseline;
+  margin-top: 20px;
+}
+
+
+.alert{
+  font-family: "Calistoga", cursive;
+  color: white;
+  font-size: 2.125em;
+  text-align: center;
+  margin-top: 50px;
+
+
 }
 
 @media only screen and (max-width: 640px) {
   h1 {
-    font-size: 1em;
+    font-size: 1.5em;
   }
   h2 {
-    font-size: 0.5em;
+    font-size: 1em;
   }
 
   .movieList {
