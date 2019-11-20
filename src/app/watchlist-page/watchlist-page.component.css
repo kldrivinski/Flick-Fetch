@@ -183,10 +183,10 @@ img {
 
 @media only screen and (max-width: 640px) {
   h1 {
-    font-size: 1em;
+    font-size: 1.5em;
   }
   h2 {
-    font-size: 0.5em;
+    font-size: 1em;
   }
 
   .movieList {
@@ -236,6 +236,7 @@ img {
     color: whitesmoke;
     font-size: 1.5em;
     font-family: "Calistoga", cursive;
+    text-align: right;
   }
 
   .nav a:hover {
