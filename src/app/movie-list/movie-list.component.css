@@ -164,6 +164,20 @@ img {
 .background img {
   align-self: baseline;
 }
+.topButton {
+  font-family: "Open Sans", sans-serif;
+  padding: 10px;
+  margin-left: 10px;
+  background-color: #76252c;
+  border-radius: 5px;
+  border-style: 2px #76252c;
+  border-width: 3px;
+  font-size: 16px;
+  color: white;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+}
 
 @media only screen and (max-width: 640px) {
   h1 {

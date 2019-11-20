@@ -40,3 +40,7 @@
     </button>
   </div>
 </div>
+
+<div *ngIf="movies.length > 3">
+  <button class="topButton" (click)="goToTop($event)">Top of Page</button>
+</div>

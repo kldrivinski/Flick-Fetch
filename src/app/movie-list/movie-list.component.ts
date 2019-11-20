@@ -50,4 +50,7 @@ export class MovieListComponent implements OnInit {
     this.checkForEmptyArray();
     console.log(this.noMovies);
   }
+  goToTop(event) {
+    window.scroll(0, 0);
+  }
 }

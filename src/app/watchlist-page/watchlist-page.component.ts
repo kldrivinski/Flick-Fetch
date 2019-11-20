@@ -14,8 +14,7 @@ export class WatchlistPageComponent implements OnInit {
 
   noMovies: boolean = true;
 
-  constructor(private movieService: MovieFinderService) { }
-
+  constructor(private movieService: MovieFinderService) {}
 
   checkForEmptyArray() {
     if (this.watchList.length > 0) {
@@ -41,6 +40,7 @@ export class WatchlistPageComponent implements OnInit {
     console.log(this.noMovies);
     console.log(this.watchList);
   }
-
-
+  goToTop(event) {
+    window.scroll(0, 0);
+  }
 }
