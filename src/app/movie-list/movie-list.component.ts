@@ -15,10 +15,9 @@ export class MovieListComponent implements OnInit {
 
   noMovies: boolean = true;
 
+  onList: boolean = false;
 
-  onList: boolean = true;
-
-  constructor(private movieService: MovieFinderService) { }
+  constructor(private movieService: MovieFinderService) {}
 
   checkForEmptyArray() {
     if (this.movies !== undefined) {
@@ -33,6 +32,11 @@ export class MovieListComponent implements OnInit {
   addToWatchList(movie) {
     // this.noMovies = false;
     this.movieService.setWatchList(movie);
+    this.onList = true;
+    setTimeout(() => {
+      this.onList = false;
+    }, 1000);
+    // window.alert("added to watchlist");
   }
 
   setIndex(index: number) {
@@ -52,7 +56,7 @@ export class MovieListComponent implements OnInit {
     this.movies = this.movieService.getMovies();
     this.checkForEmptyArray();
     console.log(this.noMovies);
-    console.log(this.movies)
+    console.log(this.movies);
   }
   goToTop(event) {
     window.scroll(0, 0);

@@ -24,22 +24,23 @@
 <div class="content">
   <div class="movieList" *ngFor="let movie of movies; index as i">
     <button class="title" (click)="setIndex(i)">{{ movie.title }}</button>
-    <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" (click)="setIndex(i)" />
+    <img
+      src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}"
+      (click)="setIndex(i)"
+    />
     <div class="container" *ngIf="index === i">
       <button class="close" (click)="resetIndex()">
         <i class="fas fa-times"></i>
       </button>
       <h2>{{ movie.title }}</h2>
       <p>{{ movie.overview }}</p>
-      <div class="alert" *ngIf="index ===i && onList">
+      <div class="alert" *ngIf="index === i && onList">
         Added to list!
       </div>
     </div>
     <button class="add" (click)="addToWatchList(movie)" (click)="clickEvent(i)">
       Add to watch list
     </button>
-
-
   </div>
 </div>
 
