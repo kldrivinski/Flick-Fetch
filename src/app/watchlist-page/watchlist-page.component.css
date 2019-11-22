@@ -65,7 +65,7 @@ p {
   margin: auto;
   background-color: #383737;
   color: white;
-  height: 80%;
+  height: 92%;
   width: 80%;
   position: absolute;
   z-index: 2;
@@ -131,7 +131,7 @@ img {
   margin: 0;
 }
 
-.nav a {
+.navLinks a {
   margin-right: 10px;
   margin-left: 10px;
   display: inline;
@@ -141,7 +141,7 @@ img {
   font-family: "Calistoga", cursive;
 }
 
-.nav a:hover {
+.navLinks a:hover {
   color: #7b6c6d;
 }
 
@@ -179,6 +179,8 @@ img {
   position: fixed;
   right: 50px;
   bottom: 50px;
+  z-index: 3;
+
 }
 
 @media only screen and (max-width: 640px) {
@@ -224,31 +226,32 @@ img {
     flex-direction: row;
     justify-content: center;
     background-color: #76252c;
-    padding: 10px;
+    padding: 5px;
     margin: 0;
   }
 
-  .nav a {
-    margin-right: 5px;
-    margin-left: 5px;
+  .navLinks {
+    display: flex;
+    flex-direction: column;
+    width: 50%
+  }
+  .navLinks a {
+    margin: 2px;
+    padding-top: 10px;
     display: inline;
     text-decoration: none;
     color: whitesmoke;
     font-size: 1.5em;
     font-family: "Calistoga", cursive;
+    align-self: right;
     text-align: right;
   }
 
-  .nav a:hover {
-    color: #7b6c6d;
+  .navLinks p {
+    display: none;
+
   }
 
-  .nav p {
-    display: inline;
-    color: whitesmoke;
-    font-size: 1.5em;
-    margin: 20px;
-  }
 
   .background {
     display: none;

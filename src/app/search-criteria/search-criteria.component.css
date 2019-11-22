@@ -1,8 +1,14 @@
 .body {
   display: flex;
   flex-direction: column;
+  width: auto;
 }
 
+
+h2 {
+  font-size: 34px;
+
+}
 .background {
   background-image: url("/assets/movietheater.png");
   background-repeat: no-repeat;
@@ -19,8 +25,8 @@
 .intro {
   display: table-cell;
   vertical-align: middle;
-  width: 100%;
-  max-width: none;
+  width: auto;
+  /* max-width: none; */
 }
 
 .content {
@@ -30,6 +36,9 @@
   margin-bottom: 400px;
   line-height: 5;
   font-family: "Bebas Neue", cursive;
+  
+  /* border: 10px solid black; */
+
 }
 
 form {
@@ -107,6 +116,7 @@ button {
   background-color: #76252c;
   padding: 20px;
   margin: 0;
+  width: auto;
 }
 
 .nav a {
@@ -141,3 +151,160 @@ background-position-x: 55px;
 width: 80px;
 height: 100px;
 } */
+
+
+@media only screen and (max-width: 640px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.5em;
+    margin: 0;
+
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #76252c;
+    padding: 2px;
+    margin: 0;
+    width: auto;
+  }
+
+  .nav a {
+    margin-right: 2px;
+    margin-left: 2px;
+    display: inline;
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.5em;
+    font-family: "Calistoga", cursive;
+  }
+
+  .nav a:hover {
+    color: #7b6c6d;
+  }
+
+  .nav p {
+    display: inline;
+    color: whitesmoke;
+    font-size: 1.5em;
+    margin: 20px;
+  }
+
+
+  .content {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 300px;
+    line-height: 5;
+    font-family: "Bebas Neue", cursive;
+    /* border: 10px solid black; */
+  
+  }
+  
+  form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: center;
+    /* border: 10px solid black; */
+  }
+  
+  
+  label[name="rating"] {
+    line-height: normal;
+    padding: 10px 10px;
+    justify-self: start;
+    /* display: none; */
+  }
+  
+  select[name="rating"] {
+    background: no-repeat right #ddd;
+    -webkit-appearance: media-slider;
+    background-position-x: 55px;
+    height: 60px;
+    width: 80px;
+    font-family: "IBM Plex Serif", serif;
+    font-size: 25px;
+  }
+  
+  label[name="genre"] {
+    line-height: normal;
+    padding: 10px 10px;
+    justify-self: start;
+  }
+  
+  select[name="genre"] {
+    background: no-repeat right #ddd;
+    -webkit-appearance: media-slider;
+    background-position-x: 55px;
+    font-family: "IBM Plex Serif", serif;
+    height: 60px;
+    width: 80px;
+  }
+  
+  label[name="year"] {
+    line-height: normal;
+    padding: 10px 10px;
+    justify-self: start;
+  }
+  
+  input[name="year"] {
+    height: 60px;
+    width: 80px;
+    font-family: "IBM Plex Serif", serif;
+    /* -webkit-appearance: media-slider; */
+    background-color: #dddddd;
+    border-radius: 5px;
+    border-style: none;
+  }
+  
+  /* .valid {
+    display: none;
+  } */
+  
+  button {
+    align-self: flex-end;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px 10px;
+    background-color: #76252c;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    border-radius: 5px;
+    height: 60px;
+  }
+
+  label {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+  }
+
+  select {
+    align-self: center ;
+  }
+
+
+  .background {
+    background-image: url("/assets/movietheater.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* top: 100px; */
+    /* positionheight: 80px;
+    width: 100px;: fixed; */
+    width: auto;
+    height: 100vh;
+    /* display: table; */
+  }
+
+}
+
+

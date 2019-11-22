@@ -5,9 +5,9 @@
 <!-- <br /><a routerLink="/watchList">Your Watch-List</a><br /> -->
 <div class="nav">
   <p>Flick Fetch</p>
-  <div>
+  <div class="navLinks">
     <a routerLink="/watchList">Watch List</a>
-    <p>|</p>
+    <p class="divider">|</p>
     <a routerLink="/search">Search</a>
   </div>
 </div>
@@ -24,10 +24,7 @@
 <div class="content">
   <div class="movieList" *ngFor="let movie of movies; index as i">
     <button class="title" (click)="setIndex(i)">{{ movie.title }}</button>
-    <img
-      src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}"
-      (click)="setIndex(i)"
-    />
+    <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" (click)="setIndex(i)" />
     <div class="container" *ngIf="index === i">
       <button class="close" (click)="resetIndex()">
         <i class="fas fa-times"></i>

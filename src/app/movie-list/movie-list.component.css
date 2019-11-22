@@ -130,7 +130,7 @@ img {
   margin: 0;
 }
 
-.nav a {
+.navLinks a {
   margin-right: 10px;
   margin-left: 10px;
   display: inline;
@@ -141,7 +141,7 @@ img {
   text-align: right;
 }
 
-.nav a:hover {
+.navLinks a:hover {
   color: #7b6c6d;
 }
 
@@ -191,6 +191,7 @@ img {
   position: fixed;
   right: 50px;
   bottom: 50px;
+  z-index: 3;
 }
 
 @media only screen and (max-width: 640px) {
@@ -240,26 +241,29 @@ img {
     margin: 0;
   }
 
-  .nav a {
-    margin-right: 2px;
-    margin-left: 2px;
+  .navLinks {
+    display: flex;
+    flex-direction: column;
+    width: 50%
+  }
+  .navLinks a {
+    margin: 2px;
+    padding-top: 10px;
     display: inline;
     text-decoration: none;
     color: whitesmoke;
     font-size: 1.5em;
     font-family: "Calistoga", cursive;
+    align-self: right;
+    text-align: right;
   }
 
-  .nav a:hover {
-    color: #7b6c6d;
+
+  .navLinks p {
+    display: none;
+
   }
 
-  .nav p {
-    display: inline;
-    color: whitesmoke;
-    font-size: 1.5em;
-    margin: 20px;
-  }
 
   .background {
     display: none;
